@@ -33,7 +33,5 @@ function makeinform() {
         value: '로그인'
     }) );
 
-
-    // console.log(form);
     return form;
 }
