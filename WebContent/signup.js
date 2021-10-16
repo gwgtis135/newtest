@@ -4,9 +4,7 @@ $(document).ready(function () {
     let signupbtn = $('#signupbtn')
 
     $(signupbtn).click(function () {
-        console.log($(modal))
         $(modal).toggleClass("show");
-        console.log($(modal))
         $('.modal_body').empty();
         $('.modal_body').append(makeupform());
         if ($(modal).hasClass("show")) {
@@ -15,8 +13,6 @@ $(document).ready(function () {
     })
 
     $(modal).click(function (event) {
-        console.log($(event.target))
-        console.log($(modal))
         if ($(event.target).hasClass("show") == $(modal).hasClass("show")) {
             $(modal.toggleClass("show"))
         }
