@@ -1,10 +1,29 @@
 $(document).ready(function () {
+    let modal = $('.modal')
+    let modalbody = $('.modal_body')
+    let signupbtn = $('#signupbtn')
 
-    $("#signup").append(makeform());
+    $(signupbtn).click(function () {
+        console.log($(modal))
+        $(modal).toggleClass("show");
+        console.log($(modal))
+        $('.modal_body').empty();
+        $('.modal_body').append(makeupform());
+        if ($(modal).hasClass("show")) {
+            $(modalbody).css("overflow","auto");
+        }
+    })
 
+    $(modal).click(function (event) {
+        console.log($(event.target))
+        console.log($(modal))
+        if ($(event.target).hasClass("show") == $(modal).hasClass("show")) {
+            $(modal.toggleClass("show"))
+        }
+    })
 })
 
-function makeform() {
+function makeupform() {
     var form = $('<form />');
     form.attr("name", "form");
     form.attr("method", "post");
@@ -26,25 +45,12 @@ function makeform() {
     }), $('<br>'), $('<input />', {
         type: 'text',
         name: 'data1',
+        // current-password:'password',
         value: 'your name'
     }), $('<br>'), $('<input />', {
         type: 'submit',
         value: '회원가입'
-    }), );
+    }));
 
-
-    console.log(form);
     return form;
-}
-
-function makeDiv(row) {
-    let div = $('<tr />').append(
-        $('<td />').html(row.id),
-        $('<td />').html(row.centerName),
-        $('<td />').html(row.sido),
-        $('<td />').html(row.facilityName),
-        $('<td />').html('<a href="daum_map.jsp?x=' + row.lat + '&y=' + row.lng + '&fname=' + row.facilityName + '" target="_blank">지도</a>'),
-    )
-    // console.log(div)
-    return div
 }
