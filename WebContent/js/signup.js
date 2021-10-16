@@ -41,7 +41,6 @@ function makeupform() {
     }), $('<br>'), $('<input />', {
         type: 'text',
         name: 'data1',
-        // current-password:'password',
         value: 'your name'
     }), $('<br>'), $('<input />', {
         type: 'submit',
