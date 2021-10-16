@@ -23,30 +23,10 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 })
 
-{
-    /* <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" id=signupbtn>Sign Up</a></li>
-    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" id="signinbtn">Sign In</a></li> */
-}
-
-{
-    /* <div class="collapse navbar-collapse" id="navbarResponsive">
-    <ul class="navbar-nav ms-auto py-4 py-lg-0"> */
-}
 $(document).ready(function () {
 
-    $.cookie('rorc', 'cafe', {
-        expires: 7,
-        path: '/'
-    });
-    console.log($.cookie('rorc'))
-
     let ul = $('#navbarResponsive>ul');
-    if ($.cookie('rorc')==="cafe") {
-        ul.append('<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" id="restbtn">Restaurant</a></li>')
         ul.append('<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" id="cafebtn">Cafe</a></li>')
-    } else {
-        ul.append('<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" id="cafebtn">Cafe</a></li>')
-    }
     if ($.cookie('user_id')) {
         ul.append('<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" id="signoutbtn">Sign Out</a></li>', '<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" id="mypagebtn">my page</a></li>')
     } else {
