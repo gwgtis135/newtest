@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /*!
 * Start Bootstrap - Clean Blog v6.0.6 (https://startbootstrap.com/theme/clean-blog)
 * Copyright 2013-2021 Start Bootstrap
@@ -10,6 +11,20 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+.restimg {
+  padding-right: 15px;
+}
+
+.restpos {
+  /* position: absolute; */
+  float: right;
+  /* text-align: right; */
+}
+
+.resthr {
+  /* padding-top: 50px; */
+  border: 1px solid;
+}
 
 #cafe,
 #rest {
