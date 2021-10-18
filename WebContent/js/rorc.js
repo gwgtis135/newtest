@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 $(document).ready(function () {
     let cafebtn = $('#cafebtn')
     let cafe = $('#cafe')
