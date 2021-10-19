@@ -9,17 +9,6 @@
 			// ajax > 서블릿 > EmpDAO: 한건 조회해서 메소드.
 			// 존재하면 true, 존지하지 않으면 false;
 
-
-
-
-
-
-
-
-
-
-
-
 $(document).ready(function () {
     let modal = $('.modal')
     let modalbody = $('.modal_body')
@@ -41,29 +30,34 @@ $(document).ready(function () {
 
 $(document).on('click', '#loginbtn' , function(e){
 	e.preventDefault();
-	console.log('111111');
+	
 	let id = $('#userId').val();
+	let pw = $('#userPw').val();
 	console.log(id);
+	console.log(pw);
 	
 	let xhttp = new XMLHttpRequest();
 	xhttp.onload = function () {
 		let exists = JSON.parse(xhttp.responseText); // {retCode: 'OK'}
 				// exist or notExist
-		if (exists.retCode == 'NG') {
-			console.log(exists.retCode);
-			window.alert('로그인 되었습니다.');
+		if (exists.retCode == 'OK') {
+			console.log('성공성공성공'+exists.retCode);
+			window.alert('로그인 성공');
 			return;
 		}
+		else{
+			
+			window.alert('로그인 실패');
 				// 정상적인 등록....
-		console.log('1111111');
+		}
 		console.log(exists.retCode);
-		console.log('2222222');
+		
 				if (id == "") {
 					window.alert("필수입력항목 확인!");
 					return;
 				}
 			}
-			xhttp.open('get', 'loginServlet?userId=' + id);
+			xhttp.open('get', 'loginServlet?userId=' + id+'&userPw=' + pw);
 			xhttp.send();
 	
 	});
@@ -128,6 +122,7 @@ function makeinform() {
         onfocus: "this.value=''"
     }), $('<br>'), $('<input />', {
         type: 'password',
+		id:'userPw',
         name: 'userPw',
         placeholder:'insert PW',
         onfocus: "this.value=''"
