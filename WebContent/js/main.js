@@ -10,7 +10,6 @@ $(document).ready(function() {
 		for (datum of data) {
 			makemain(datum, tar);
 		}
-		// console.log(data);
 	}
 	xhtp1 = new XMLHttpRequest();
 	xhtp1.open('get', '/minpro/MainServ?cmd=0');
@@ -21,7 +20,6 @@ $(document).ready(function() {
 			let tar = $('#cafelist');
 			makemain(datum, tar);
 		}
-		// console.log(data);
 	}
 
 })

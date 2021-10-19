@@ -1,6 +1,5 @@
 $(document).ready(function() {
 	var id = getParameterByName('id');
-	console.log(id);
 	let xhtp = new XMLHttpRequest();
 	xhtp.open('get', '/minpro/detail?id=' + id);
 	xhtp.send();
@@ -38,7 +37,7 @@ $(document).ready(function() {
 		pre2.html('       ' + data.addr);
 		outdiv.append(pre2);
 
-		pre = $('<pre />');
+		pre = $('<p />');
 		pre2 = $('<pre />');
 		pre.attr('class', 'fw-bolder');
 		pre.html('연락처')
@@ -46,7 +45,7 @@ $(document).ready(function() {
 		outdiv.append(pre);
 		outdiv.append(pre2);
 
-		pre = $('<pre />');
+		pre = $('<p />');
 		pre2 = $('<pre />');
 		pre.attr('class', 'fw-bolder');
 		pre.html('메인메뉴')
@@ -55,7 +54,7 @@ $(document).ready(function() {
 		outdiv.append(pre);
 		outdiv.append(pre2);
 
-		pre = $('<pre />');
+		pre = $('<p />');
 		pre2 = $('<pre />');
 		pre.attr('class', 'fw-bolder');
 		pre.html('주차공간')
@@ -63,7 +62,7 @@ $(document).ready(function() {
 		outdiv.append(pre);
 		outdiv.append(pre2);
 
-		pre = $('<pre />');
+		pre = $('<p />');
 		pre2 = $('<pre />');
 		pre.attr('class', 'fw-bolder');
 		pre.html('영업시간')
@@ -72,11 +71,6 @@ $(document).ready(function() {
 		outdiv.append(pre2);
 
 		tar.append(outdiv);
-		console.log(data);
-		/*for (datum of data) {
-			makemain(datum, tar);
-		}*/
-		// console.log(data);
 	}
 })
 

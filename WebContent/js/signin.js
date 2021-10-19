@@ -27,7 +27,6 @@ $(document).ready(function() {
 		}
 	})
 	
-	
 	//로그아웃버튼 클릭 이벤트
 	$(document).on('click', '#signoutbtn', function(e) {		
 		sessionStorage.removeItem('userId');
