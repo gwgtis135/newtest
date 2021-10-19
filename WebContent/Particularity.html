@@ -16,15 +16,19 @@
         rel="stylesheet" type="text/css" />
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../WebContent/js/jquery-3.6.0.js"></script>
-    <script src="../WebContent/js/scripts.js"></script>
-    <script src="../WebContent/js/jquery.cookie.js"></script>
-    <script src="../WebContent/js/signin.js"></script>
-    <script src="../WebContent/js/signup.js"></script>
-    <script src="../WebContent/js/rorc.js"></script>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/signin.js"></script>
+    <script src="js/signup.js"></script>
+    <script src="rorc.js"></script>
 </head>
 
 <body>
+    <div class="modal">
+        <div class="modal_body">
+        </div>
+    </div>
     <!-- Responsive navbar-->
     <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
         <div class="container px-4 px-lg-5">
@@ -85,282 +89,96 @@
                 </div>
     </section>
     <!-- Pricing section-->
-    <section class="bg-light py-5 border-bottom">
-        <div class="container px-5 my-5">
-            <div class="text-center mb-5">
-                <h2 class="fw-bolder">Pay as you grow</h2>
-                <p class="lead mb-0">With our no hassle pricing plans</p>
-            </div>
-            <div class="row gx-5 justify-content-center">
-                <!-- Pricing card free-->
-                <div class="col-lg-6 col-xl-4">
-                    <div class="card mb-5 mb-xl-0">
-                        <div class="card-body p-5">
-                            <div class="small text-uppercase fw-bold text-muted">Free</div>
-                            <div class="mb-3">
-                                <span class="display-4 fw-bold">$0</span>
-                                <span class="text-muted">/ mo.</span>
-                            </div>
-                            <ul class="list-unstyled mb-4">
-                                <li class="mb-2">
-                                    <i class="bi bi-check text-primary"></i>
-                                    <strong>1 users</strong>
-                                </li>
-                                <li class="mb-2">
-                                    <i class="bi bi-check text-primary"></i>
-                                    5GB storage
-                                </li>
-                                <li class="mb-2">
-                                    <i class="bi bi-check text-primary"></i>
-                                    Unlimited public projects
-                                </li>
-                                <li class="mb-2">
-                                    <i class="bi bi-check text-primary"></i>
-                                    Community access
-                                </li>
-                                <li class="mb-2 text-muted">
-                                    <i class="bi bi-x"></i>
-                                    Unlimited private projects
-                                </li>
-                                <li class="mb-2 text-muted">
-                                    <i class="bi bi-x"></i>
-                                    Dedicated support
-                                </li>
-                                <li class="mb-2 text-muted">
-                                    <i class="bi bi-x"></i>
-                                    Free linked domain
-                                </li>
-                                <li class="text-muted">
-                                    <i class="bi bi-x"></i>
-                                    Monthly status reports
-                                </li>
-                            </ul>
-                            <div class="d-grid"><a class="btn btn-outline-primary" href="#!">Choose plan</a></div>
-                        </div>
+    <section class="py-5 border-bottom" id="features">
+        <div class="container px-5 my-3">
+            <div class="row gx-5">
+                <div class="col-lg-10 mb-5 mb-lg-0">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
+                            class="bi bi-collection"></i></div>
+                    <pre class="fw-bolder">리뷰(x건)</pre>
+                    <div class="mx-6 my-3 reviewcontent">
+                        <div class="reviewid">아무개</div>
+                        Thank you for putting together such a great product. We loved
+                        working with you and the whole team, and we will be recommending you to others!Thank you for
+                        putting together such a great product. We loved
+                        working with you and the whole team, and we will be recommending you to others!Thank you for
+                        putting together such a great product. We loved
+                        working with you and the whole team, and we will be recommending you to others!Thank you for
+                        putting together such a great product. We loved
+                        working with you and the whole team, and we will be recommending you to others!Thank you for
+                        putting together such a great product. We loved
+                        working with you and the whole team, and we will be recommending you to others!Thank you for
+                        putting together such a great product. We loved
+                        working with you and the whole team, and we will be recommending you to others!Thank you for
+                        putting together such a great product. We loved
+                        working with you and the whole team, and we will be recommending you to others!Thank you for
+                        putting together such a great product. We loved
+                        working with you and the whole team, and we will be recommending you to others!
+                        working with you and the whole team, and we will br recommending
+                        <div class="reviewdate">2021-10-15</div>
+                    </div>
+                    <div class="mx-6 my-2 reviewcontent">
+                        <div class="reviewid">애국가</div>
+                        동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이보전하세
+                        남산위에 저소나무 철갑을 두른듯 바람서리 불변함이 우리기상 일세 무궁화 삼천리 화려강산 대한사람 대한으로 길이보전하세
+                        가을하늘 공활한대 높고 구름없이 밝은달은 우리가슴 일편단심 일세 무궁화 삼천리 화려강산 대한사람 대한으로 길이보전하세
+                        이기상과 이맘으로 충성을 다하여 괴로우나 즐거우나 나라 사랑하세 무궁화 삼천리 화려강산 대한사람 대한으로 길이보전하세
+                        <div class="reviewdate">2021-10-15</div>
+                    </div>
+                    <div class="mx-6 my-2 reviewcontent">
+                        <div class="reviewid">oasis</div>난 널 (you) 목말라해 너무 더워
+                        물이 필요해 Hot in here
+                        난 웅덩이 깊이 파인 곳을 찾아 다녀
+                        달콤하게 날 더 바라봐줘 (넌 훌륭해) 이 메마른 땅을
+                        정글로 만들고 난 모험하고 또 탐험
+                        You know how we do it we just do it
+                        All you ladies hands in the air
+                        All my ladies hands up in the air
+                        그녀는 그녀는 날 미치게 해 그녀는 날 숨쉬게 해
+                        Yeah
+                        O A She's mine O A She's mine
+                        O A She's mine Yeah She's mine
+                        All you ladies hands in the air
+                        All my ladies hands up in the air
+                        그녀는 그녀는 날 미치게 해 그녀는 날 숨쉬게 해
+                        Get closer to my body
+                        천국에다가 데려다 줄게 body to body
+                        넌 낮이 밤이 될 때까지 waterfall
+                        그 속에서 난 헤엄치고 싶어
+                        You know how we do it we just do it
+                        All you ladies hands in the air
+                        All my ladies hands up in the air
+                        그녀는 그녀는 날 미치게 해
+                        그녀는 날 숨쉬게 해
+                        Yeah
+                        O A She's mine O A She's mine
+                        O A She's mine Yeah She's mine
+                        All you ladies hands in the air
+                        All my ladies hands up in the air
+                        그녀는 그녀는 날 미치게 해 그녀는 날 숨쉬게 해
+                        넌 남자들 욕망에 갈증 나게 하면서
+                        어째서 주위 여자들은 물 맥여
+                        때마침 넌 제대로 된 상대를 만났어
+                        난 태연하게 제안하지 술 대결
+                        결관 KO 고양이한테 생선을 맡긴 거야
+                        늘 첫 경험하는 자세 앞뒤를 몰라
+                        감탄사대신 엄지 척 다리 사이로
+                        난 광주출신 아니지만 전라도 환영
+                        넌 겨울 해 밤도 안됐는데 자꾸만 지려해 baby oh
+                        쪽쪽 물고 뜯고 맛보고 즐겨 악 질러대
+                        하고 싶죠 하고 있는데도 하고 싶을 거야
+                        그럴 땐 이걸 꺼내먹어 (You Know What)
+                        지구부터 달까지 로켓을 쏘아
+                        All you ladies hands in the air
+                        All my ladies hands up in the air
+                        그녀는 그녀는 날 미치게 해
+                        그녀는
+                        O A She's mine
+                        O A She's mine
+                        O A She's mine
+                        <div class="reviewdate">2021-10-15</div>
                     </div>
                 </div>
-                <!-- Pricing card pro-->
-                <div class="col-lg-6 col-xl-4">
-                    <div class="card mb-5 mb-xl-0">
-                        <div class="card-body p-5">
-                            <div class="small text-uppercase fw-bold">
-                                <i class="bi bi-star-fill text-warning"></i>
-                                Pro
-                            </div>
-                            <div class="mb-3">
-                                <span class="display-4 fw-bold">$9</span>
-                                <span class="text-muted">/ mo.</span>
-                            </div>
-                            <ul class="list-unstyled mb-4">
-                                <li class="mb-2">
-                                    <i class="bi bi-check text-primary"></i>
-                                    <strong>5 users</strong>
-                                </li>
-                                <li class="mb-2">
-                                    <i class="bi bi-check text-primary"></i>
-                                    5GB storage
-                                </li>
-                                <li class="mb-2">
-                                    <i class="bi bi-check text-primary"></i>
-                                    Unlimited public projects
-                                </li>
-                                <li class="mb-2">
-                                    <i class="bi bi-check text-primary"></i>
-                                    Community access
-                                </li>
-                                <li class="mb-2">
-                                    <i class="bi bi-check text-primary"></i>
-                                    Unlimited private projects
-                                </li>
-                                <li class="mb-2">
-                                    <i class="bi bi-check text-primary"></i>
-                                    Dedicated support
-                                </li>
-                                <li class="mb-2">
-                                    <i class="bi bi-check text-primary"></i>
-                                    Free linked domain
-                                </li>
-                                <li class="text-muted">
-                                    <i class="bi bi-x"></i>
-                                    Monthly status reports
-                                </li>
-                            </ul>
-                            <div class="d-grid"><a class="btn btn-primary" href="#!">Choose plan</a></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Pricing card enterprise-->
-                <div class="col-lg-6 col-xl-4">
-                    <div class="card">
-                        <div class="card-body p-5">
-                            <div class="small text-uppercase fw-bold text-muted">Enterprise</div>
-                            <div class="mb-3">
-                                <span class="display-4 fw-bold">$49</span>
-                                <span class="text-muted">/ mo.</span>
-                            </div>
-                            <ul class="list-unstyled mb-4">
-                                <li class="mb-2">
-                                    <i class="bi bi-check text-primary"></i>
-                                    <strong>Unlimited users</strong>
-                                </li>
-                                <li class="mb-2">
-                                    <i class="bi bi-check text-primary"></i>
-                                    5GB storage
-                                </li>
-                                <li class="mb-2">
-                                    <i class="bi bi-check text-primary"></i>
-                                    Unlimited public projects
-                                </li>
-                                <li class="mb-2">
-                                    <i class="bi bi-check text-primary"></i>
-                                    Community access
-                                </li>
-                                <li class="mb-2">
-                                    <i class="bi bi-check text-primary"></i>
-                                    Unlimited private projects
-                                </li>
-                                <li class="mb-2">
-                                    <i class="bi bi-check text-primary"></i>
-                                    Dedicated support
-                                </li>
-                                <li class="mb-2">
-                                    <i class="bi bi-check text-primary"></i>
-                                    <strong>Unlimited</strong>
-                                    linked domains
-                                </li>
-                                <li class="text-muted">
-                                    <i class="bi bi-check text-primary"></i>
-                                    Monthly status reports
-                                </li>
-                            </ul>
-                            <div class="d-grid"><a class="btn btn-outline-primary" href="#!">Choose plan</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Testimonials section-->
-    <section class="py-5 border-bottom">
-        <div class="container px-5 my-5 px-5">
-            <div class="text-center mb-5">
-                <h2 class="fw-bolder">Customer testimonials</h2>
-                <p class="lead mb-0">Our customers love working with us</p>
-            </div>
-            <div class="row gx-5 justify-content-center">
-                <div class="col-lg-6">
-                    <!-- Testimonial 1-->
-                    <div class="card mb-4">
-                        <div class="card-body p-4">
-                            <div class="d-flex">
-                                <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-1"></i>
-                                </div>
-                                <div class="ms-4">
-                                    <p class="mb-1">Thank you for putting together such a great product. We loved
-                                        working with you and the whole team, and we will be recommending you to others!
-                                    </p>
-                                    <div class="small text-muted">- Client Name, Location</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Testimonial 2-->
-                    <div class="card">
-                        <div class="card-body p-4">
-                            <div class="d-flex">
-                                <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-1"></i>
-                                </div>
-                                <div class="ms-4">
-                                    <p class="mb-1">The whole team was a huge help with putting things together for our
-                                        company and brand. We will be hiring them again in the near future for
-                                        additional work!</p>
-                                    <div class="small text-muted">- Client Name, Location</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Contact section-->
-    <section class="bg-light py-5">
-        <div class="container px-5 my-5 px-5">
-            <div class="text-center mb-5">
-                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-envelope"></i>
-                </div>
-                <h2 class="fw-bolder">Get in touch</h2>
-                <p class="lead mb-0">We'd love to hear from you</p>
-            </div>
-            <div class="row gx-5 justify-content-center">
-                <div class="col-lg-6">
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- * * SB Forms Contact Form * *-->
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- This form is pre-integrated with SB Forms.-->
-                    <!-- To make this form functional, sign up at-->
-                    <!-- https://startbootstrap.com/solution/contact-forms-->
-                    <!-- to get an API token!-->
-                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                        <!-- Name input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="name" type="text" placeholder="Enter your name..."
-                                data-sb-validations="required" />
-                            <label for="name">Full name</label>
-                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                        </div>
-                        <!-- Email address input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="email" type="email" placeholder="name@example.com"
-                                data-sb-validations="required,email" />
-                            <label for="email">Email address</label>
-                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                        </div>
-                        <!-- Phone number input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890"
-                                data-sb-validations="required" />
-                            <label for="phone">Phone number</label>
-                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
-                            </div>
-                        </div>
-                        <!-- Message input-->
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" id="message" type="text"
-                                placeholder="Enter your message here..." style="height: 10rem"
-                                data-sb-validations="required"></textarea>
-                            <label for="message">Message</label>
-                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
-                            </div>
-                        </div>
-                        <!-- Submit success message-->
-                        <!---->
-                        <!-- This is what your users will see when the form-->
-                        <!-- has successfully submitted-->
-                        <div class="d-none" id="submitSuccessMessage">
-                            <div class="text-center mb-3">
-                                <div class="fw-bolder">Form submission successful!</div>
-                                To activate this form, sign up at
-                                <br />
-                                <a
-                                    href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                            </div>
-                        </div>
-                        <!-- Submit error message-->
-                        <!---->
-                        <!-- This is what your users will see when there is-->
-                        <!-- an error submitting the form-->
-                        <div class="d-none" id="submitErrorMessage">
-                            <div class="text-center text-danger mb-3">Error sending message!</div>
-                        </div>
-                        <!-- Submit Button-->
-                        <div class="d-grid"><button class="btn btn-primary btn-lg disabled" id="submitButton"
-                                type="submit">Submit</button></div>
-                    </form>
-                </div>
-            </div>
-        </div>
     </section>
     <!-- Footer-->
     <footer class="border-top">
