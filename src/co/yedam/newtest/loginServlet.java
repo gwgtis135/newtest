@@ -11,32 +11,35 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @WebServlet("/loginServlet")
-public class signInServlet extends HttpServlet {
+public class loginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    public signInServlet() {
+    /**
+     * Default constructor. 
+     */
+    public loginServlet() {
     	
     }
   
 
-	
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		
 		String id = request.getParameter("userId");	//id?
-		String pw = request.getParameter("userPw");	//id?
-			
 		
 		// {"retCode":"OK"} / {"retCode":"NG"}
 				PrintWriter out = response.getWriter();
 				
 				signInDAO dao = signInDAO.getInstance();
 				
-				if(dao.checkId(id, pw)) {
-					// 입력한 아이디로 신규 생성.
+				if(!(dao.checkId(id))) {
+					// �Է��� ���̵�� �ű� ����.
 					out.println("{\"retCode\":\"OK\"}");
 				} else {
-					// 있거나 에러발생.
+					// �ְų� �����߻�.
 					out.println("{\"retCode\":\"NG\"}");
 				}
 		
