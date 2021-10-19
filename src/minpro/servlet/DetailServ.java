@@ -18,16 +18,17 @@ import minpro.DAO.rest;
 import minpro.DAO.restDAO;
 
 /**
- * Servlet implementation class MainServ
+ * Servlet implementation class detail
  */
-@WebServlet("/MainServ")
-public class MainServ extends HttpServlet {
+@WebServlet("/detail")
+public class DetailServ extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * Default constructor.
+	 * @see HttpServlet#HttpServlet()
 	 */
-	public MainServ() {
+	public DetailServ() {
+		super();
 		// TODO Auto-generated constructor stub
 	}
 
@@ -37,23 +38,19 @@ public class MainServ extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
 
 		PrintWriter out = response.getWriter();
 		Gson gson = new GsonBuilder().create();
 
-		int cmd = Integer.parseInt(request.getParameter("cmd"));
+		int cmd = Integer.parseInt(request.getParameter("id"));
 		restDAO dao = new restDAO();
-		List<rest> list = new ArrayList<>();
-		if (cmd == 1) {
-			list = dao.viewRest();
-		} else {
-			list = dao.viewCafe();
-		}
-
-		out.println(gson.toJson(list));
-
+		rest rest = new rest();
+		rest = dao.detailview(cmd);
+		out.println(gson.toJson(rest));
 	}
 
 	/**
