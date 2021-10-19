@@ -1,6 +1,6 @@
 package minpro.DAO;
 
-public class menu {
+public class review {
 	private int id;
 	private String manu;
 	public int getId() {
