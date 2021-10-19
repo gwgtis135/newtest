@@ -39,33 +39,30 @@ $(document).ready(function() {
 	})
 
 
-$(document).on('click', '#loginbtn' , function(e){
-	e.preventDefault();
-	console.log('111111');
-	let id = $('#userId').val();
-	console.log(id);
-	
-	let xhttp = new XMLHttpRequest();
-	xhttp.onload = function () {
-		let exists = JSON.parse(xhttp.responseText); // {retCode: 'OK'}
-				// exist or notExist
-		if (exists.retCode == 'NG') {
-			console.log(exists.retCode);
-			window.alert('로그인 되었습니다.');
-			return;
-		}
-				// 정상적인 등록....
-		console.log('1111111');
-		console.log(exists.retCode);
-		console.log('2222222');
-				if (id == "") {
-					window.alert("필수입력항목 확인!");
-					return;
-				}
+	$(document).on('click', '#loginbtn', function(e) {
+		e.preventDefault();
+		console.log('111111');
+		let id = $('#userId').val();
+		console.log(id);
+
+		let xhttp = new XMLHttpRequest();
+		xhttp.onload = function() {
+			let exists = JSON.parse(xhttp.responseText); // {retCode: 'OK'}
+			// exist or notExist
+			if (exists.retCode == 'NG') {
+				console.log(exists.retCode);
+				window.alert('로그인 되었습니다.');
+				return;
 			}
-			xhttp.open('get', 'loginServlet?userId=' + id);
-			xhttp.send();
-	
+			// 정상적인 등록....
+			if (id == "") {
+				window.alert("필수입력항목 확인!");
+				return;
+			}
+		}
+		xhttp.open('get', 'loginServlet?userId=' + id);
+		xhttp.send();
+
 	});
 })
 
