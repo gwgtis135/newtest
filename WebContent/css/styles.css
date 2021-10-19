@@ -11,6 +11,17 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+.reviewcontent {
+  background-color: rgb(223, 223, 223);
+}
+
+.reviewid {}
+
+.reviewdate {
+  float: right;
+  color: rgb(152, 152, 152)
+}
+
 .restimg {
   padding-right: 15px;
 }
@@ -7912,6 +7923,11 @@ fieldset:disabled .btn {
   margin-left: 3rem !important;
 }
 
+.mx-6 {
+  margin-right: 7rem !important;
+  margin-left: 7rem !important;
+}
+
 .mx-auto {
   margin-right: auto !important;
   margin-left: auto !important;
@@ -7945,6 +7961,11 @@ fieldset:disabled .btn {
 .my-5 {
   margin-top: 3rem !important;
   margin-bottom: 3rem !important;
+}
+
+.my-5 {
+  margin-top: 7rem !important;
+  margin-bottom: 7rem !important;
 }
 
 .my-auto {
@@ -8116,6 +8137,11 @@ fieldset:disabled .btn {
 .px-5 {
   padding-right: 3rem !important;
   padding-left: 3rem !important;
+}
+
+.px-6 {
+  padding-right: 7rem !important;
+  padding-left: 7rem !important;
 }
 
 .py-0 {
