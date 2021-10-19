@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 $(document).ready(function () {
     let modal = $('.modal')
     let modalbody = $('.modal_body')
@@ -19,6 +22,8 @@ $(document).ready(function () {
     })
 })
 
+
+
 function makeupform() {
     var form = $('<form />');
     form.attr("name", "form");
@@ -26,22 +31,27 @@ function makeupform() {
     form.attr("action", "https://ifuwanna.tistory.com/196");
     form.attr("target", "_blank");
 
+    form.append($('<h1>회원가입</h1>'));
     form.append($('<input />', {
         type: 'text',
         name: 'data1',
-        value: 'enter email'
+        placeholder:'enter EMAIL',
+        onfocus: "this.value=''"
     }), $('<br>'), $('<input />', {
         type: 'text',
         name: 'data1',
-        value: 're enter email'
+        placeholder:'RE - enter EMAIL',
+        onfocus: "this.value=''"
     }), $('<br>'), $('<input />', {
         type: 'password',
         name: 'data1',
-        value: 'password'
+        placeholder:'enter PASSWORD',
+        onfocus: "this.value=''"
     }), $('<br>'), $('<input />', {
         type: 'text',
         name: 'data1',
-        value: 'your name'
+        placeholder:'enter NAME',
+        onfocus: "this.value=''"
     }), $('<br>'), $('<input />', {
         type: 'submit',
         value: '회원가입'

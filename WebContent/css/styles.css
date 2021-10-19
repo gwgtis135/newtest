@@ -12269,3 +12269,25 @@ header.masthead .post-heading .meta a {
     font-size: 2.25rem;
   }
 }
+
+.modal_body>form>h1 {
+  margin-bottom: 80px;
+}
+
+.modal_body>form>input {
+  margin-bottom: 10px;
+}
+
+.modal_body>form {
+  text-align: center;
+}
+
+/*구글 로그인 버튼*/
+#my-signin2 {
+  margin-bottom: 10px;
+}
+
+/*카카오 로그인 버튼*/
+#my-signin2 {
+  padding-left: 40px;
+}
