@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class rest {
-	private int id,corr,x_p,y_p;
+	private int id,corr,x_p,y_p,cnt;
 	private double grade;
 	private String name,image_loc,off_hours,addr,menu,phone_number,park,imglist;
 
@@ -85,6 +85,12 @@ public class rest {
 	}
 	public void setImglist(String imglist) {
 		this.imglist = imglist;
+	}
+	public int getCnt() {
+		return cnt;
+	}
+	public void setCnt(int cnt) {
+		this.cnt = cnt;
 	}
 	
 }
