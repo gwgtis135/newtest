@@ -26,11 +26,6 @@ $(document).ready(function() {
 			$(modalbody).css("overflow", "auto");
 		}
 	})
-
-<<<<<<< HEAD
-
-=======
->>>>>>> e2fb8eb947bde5a0d7a2d042996912da28b13abb
 	//로그아웃버튼 클릭 이벤트
 	$(document).on('click', '#signoutbtn', function(e) {
 		sessionStorage.removeItem('userId');
@@ -56,10 +51,7 @@ $(document).ready(function() {
 				sessionStorage.setItem('userName', exists.userName);
 				console.log(sessionStorage.getItem('userId'))
 				console.log(sessionStorage.getItem('userName'))
-
-				console.log('성공성공성공' + exists.retCode);
 				window.alert('로그인 성공');
-				console.log
 				createNav();
 				let modal = $('.modal')
 				$(modal.toggleClass("show"))
