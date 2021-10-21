@@ -26,21 +26,21 @@ $(document).ready(function() {
 			$(modalbody).css("overflow", "auto");
 		}
 	})
-	
-	
+
 	//로그아웃버튼 클릭 이벤트
-	$(document).on('click', '#signoutbtn', function(e) {		
+	$(document).on('click', '#signoutbtn', function(e) {
 		sessionStorage.removeItem('userId');
 		sessionStorage.removeItem('userName');
 		location.reload(true);
-		
+
 	})
-	
+
 	$(document).on('click', '#loginbtn', function(e) {
 		e.preventDefault();
 
 		let id = $('#userId').val();
 		let pw = $('#userPw').val();
+		console.log(id + ',' + pw)
 
 
 		let xhttp = new XMLHttpRequest();
@@ -52,12 +52,10 @@ $(document).ready(function() {
 				sessionStorage.setItem('userName', exists.userName);
 				console.log(sessionStorage.getItem('userId'))
 				console.log(sessionStorage.getItem('userName'))
-				
-				console.log('성공성공성공' + exists.retCode);
-				window.alert('로그인 성공');
-				location.reload(true);
-				console.log
-				//createNav (); 	에러발생
+				createNav();
+				let modal = $('.modal')
+				$(modal.toggleClass("show"))
+
 				return;
 			} else {
 
@@ -71,7 +69,7 @@ $(document).ready(function() {
 				return;
 			}
 		}
-		xhttp.open('get', 'signInServlet?userId=' + id + '&userPw=' + pw);
+		xhttp.open('get', '/minpro/signInServlet?userId=' + id + '&userPw=' + pw);
 		xhttp.send();
 
 	});
@@ -116,9 +114,6 @@ function kakaoLogin() {
 }
 
 function makeinform() {
-
-
-
 	var form = $('<form />');
 	form.attr("name", "form");
 	form.attr("method", "post");
