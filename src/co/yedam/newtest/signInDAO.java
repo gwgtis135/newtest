@@ -18,8 +18,6 @@ public class signInDAO extends DAO {
 	}
 
 	public user checkId(String id, String pw) {
-		System.out.println("=============sdfsdf=" + id);
-		System.out.println("==============" + pw);
 
 		connect();
 		String sql = "SELECT * FROM USERS  where user_id = ? and user_Password = ?";

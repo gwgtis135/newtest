@@ -15,8 +15,8 @@ public class DAO {
 	protected ResultSet rs;
 	protected PreparedStatement psmt;
 
-	String user = "jong";
-	String pass = "jong";
+	String user = "park";
+	String pass = "park";
 	String url = "jdbc:oracle:thin:@localhost:1521:xe";
 
 	protected void connect() {
@@ -29,7 +29,6 @@ public class DAO {
 		}
 	}
 
-	// ?��결해?��.
 	protected void disconnect() {
 		if (conn != null) {
 			try {

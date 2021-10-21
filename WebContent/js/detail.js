@@ -1,6 +1,5 @@
 $(document).ready(function() {
 	var id = getParameterByName('id');
-	console.log(id);
 	let xhtp = new XMLHttpRequest();
 	xhtp.open('get', '/minpro/detail?id=' + id);
 	xhtp.send();
@@ -38,7 +37,7 @@ $(document).ready(function() {
 		pre2.html('       ' + data.addr);
 		outdiv.append(pre2);
 
-		pre = $('<pre />');
+		pre = $('<p />');
 		pre2 = $('<pre />');
 		pre.attr('class', 'fw-bolder');
 		pre.html('연락처')
@@ -46,7 +45,7 @@ $(document).ready(function() {
 		outdiv.append(pre);
 		outdiv.append(pre2);
 
-		pre = $('<pre />');
+		pre = $('<p />');
 		pre2 = $('<pre />');
 		pre.attr('class', 'fw-bolder');
 		pre.html('메인메뉴')
@@ -55,7 +54,7 @@ $(document).ready(function() {
 		outdiv.append(pre);
 		outdiv.append(pre2);
 
-		pre = $('<pre />');
+		pre = $('<p />');
 		pre2 = $('<pre />');
 		pre.attr('class', 'fw-bolder');
 		pre.html('주차공간')
@@ -63,7 +62,7 @@ $(document).ready(function() {
 		outdiv.append(pre);
 		outdiv.append(pre2);
 
-		pre = $('<pre />');
+		pre = $('<p />');
 		pre2 = $('<pre />');
 		pre.attr('class', 'fw-bolder');
 		pre.html('영업시간')
@@ -72,13 +71,58 @@ $(document).ready(function() {
 		outdiv.append(pre2);
 
 		tar.append(outdiv);
-		console.log(data);
-		/*for (datum of data) {
-			makemain(datum, tar);
-		}*/
-		// console.log(data);
+		console.log(data.cnt);
+		let t = $('#revcnt');
+
+		t.html(t.html()+"리뷰 (" + data.cnt + "건)");
 	}
+	loadrev(id);
 })
+
+function loadrev(id) {
+	$.ajax({
+		url: './loadrevServ',
+		type: 'post',
+		data: {
+			id:id
+		},
+		dataType: 'json',
+		success: function(result) {
+			console.log('success');
+			
+					//<div class="mx-6 my-3 reviewcontent">
+						//<div class="reviewid">아무개</div>
+						//div class="reviewdate">2021-10-15</div>
+			//id content grade credate
+			for(dat of result){
+				let list = $('#revlist');
+				let outdiv = $('<div />');
+				let indiv = $('<div />');
+				let thdiv = $('<div />');
+				let fodiv = $('<div />');
+				outdiv.attr('class','mx-6 my-3 reviewcontent');
+				indiv.attr('class','reviewid');
+				thdiv.attr('class','reviewdate');
+				fodiv.html(dat.content);
+				indiv.html(dat.id);
+				thdiv.html(dat.credate);
+				outdiv.append(thdiv);
+				outdiv.append(indiv);
+				outdiv.append(fodiv)
+				//outdiv.html(outdiv.html()+"<br>");
+				list.append(outdiv);
+				console.log(dat.id);
+				console.log(dat.content);
+				console.log(dat.grade);
+				console.log(dat.credate);
+			}
+		},
+		error: function(reject) {
+			//경고 메세지
+		}
+	});
+
+}
 
 function getParameterByName(name) {
 	name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
