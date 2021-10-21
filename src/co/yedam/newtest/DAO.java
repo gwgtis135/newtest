@@ -22,14 +22,13 @@ public class DAO {
 	protected void connect() {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "park", "park");
-			System.out.println("?��결성�?.");
+			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "jong", "jong");
+			System.out.println("db연결성공.");
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}
 	}
 
-	// ?��결해?��.
 	protected void disconnect() {
 		if (conn != null) {
 			try {

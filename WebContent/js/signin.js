@@ -26,7 +26,6 @@ $(document).ready(function() {
 			$(modalbody).css("overflow", "auto");
 		}
 	})
-
 	//로그아웃버튼 클릭 이벤트
 	$(document).on('click', '#signoutbtn', function(e) {
 		sessionStorage.removeItem('userId');
@@ -52,6 +51,7 @@ $(document).ready(function() {
 				sessionStorage.setItem('userName', exists.userName);
 				console.log(sessionStorage.getItem('userId'))
 				console.log(sessionStorage.getItem('userName'))
+				window.alert('로그인 성공');
 				createNav();
 				let modal = $('.modal')
 				$(modal.toggleClass("show"))
