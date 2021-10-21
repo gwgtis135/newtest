@@ -26,16 +26,16 @@ $(document).ready(function() {
 			$(modalbody).css("overflow", "auto");
 		}
 	})
-	
-	
+
+
 	//로그아웃버튼 클릭 이벤트
-	$(document).on('click', '#signoutbtn', function(e) {		
+	$(document).on('click', '#signoutbtn', function(e) {
 		sessionStorage.removeItem('userId');
 		sessionStorage.removeItem('userName');
 		location.reload(true);
-		
+
 	})
-	
+
 	$(document).on('click', '#loginbtn', function(e) {
 		e.preventDefault();
 
@@ -52,7 +52,7 @@ $(document).ready(function() {
 				sessionStorage.setItem('userName', exists.userName);
 				console.log(sessionStorage.getItem('userId'))
 				console.log(sessionStorage.getItem('userName'))
-				
+
 				console.log('성공성공성공' + exists.retCode);
 				window.alert('로그인 성공');
 				location.reload(true);
