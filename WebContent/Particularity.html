@@ -7,6 +7,8 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="description" content="" />
 <meta name="author" content="" />
+<meta name="google-signin-client_id"
+	content="YOUR_CLIENT_ID.apps.googleusercontent.com">
 <title>Business Frontpage - Start Bootstrap Template</title>
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
@@ -23,11 +25,14 @@
 <script src="js/jquery-3.6.0.js"></script>
 <script src="js/scripts.js"></script>
 <script src="js/jquery.cookie.js"></script>
+<script src="https://apis.google.com/js/platform.js?onload=renderButton"
+	async defer></script>
 <script src="js/signin.js"></script>
 <script src="js/signup.js"></script>
 <script src="js/rorc.js"></script>
 <script src="js/detail.js"></script>
 <script src="js/review.js"></script>
+<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
 
 <body>
@@ -67,76 +72,24 @@
 	<section class="py-5 border-bottom" id="features">
 		<div class="container px-5 my-5">
 			<div class="row gx-5" id="tar"></div>
+		</div>
 	</section>
 	<!-- Pricing section-->
 	<section class="py-5 border-bottom" id="features">
 		<div class="container px-5 my-3">
 			<div class="row gx-5">
-				<div class="col-lg-10 mb-5 mb-lg-0">
+				<div class="col-lg-10 mb-5 mb-lg-0" id="revlist">
 					<div
 						class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
 						<i class="bi bi-collection"></i>
 					</div>
-					<p class="fw-bolder">
-						리뷰(x건) <span>
-							<button class='revbtn' id='revbtn'>리뷰 작성</button>
-						</span>
-					</p>
-					<div class="mx-6 my-3 reviewcontent">
-						<div class="reviewid">아무개</div>
-						Thank you for putting together such a great product. We loved
-						working with you and the whole team, and we will be recommending
-						you to others!Thank you for putting together such a great product.
-						We loved working with you and the whole team, and we will be
-						recommending you to others!Thank you for putting together such a
-						great product. We loved working with you and the whole team, and
-						we will be recommending you to others!Thank you for putting
-						together such a great product. We loved working with you and the
-						whole team, and we will be recommending you to others!Thank you
-						for putting together such a great product. We loved working with
-						you and the whole team, and we will be recommending you to
-						others!Thank you for putting together such a great product. We
-						loved working with you and the whole team, and we will be
-						recommending you to others!Thank you for putting together such a
-						great product. We loved working with you and the whole team, and
-						we will be recommending you to others!Thank you for putting
-						together such a great product. We loved working with you and the
-						whole team, and we will be recommending you to others! working
-						with you and the whole team, and we will br recommending
-						<div class="reviewdate">2021-10-15</div>
-					</div>
-					<div class="mx-6 my-2 reviewcontent">
-						<div class="reviewid">애국가</div>
-						동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이보전하세
-						남산위에 저소나무 철갑을 두른듯 바람서리 불변함이 우리기상 일세 무궁화 삼천리 화려강산 대한사람 대한으로 길이보전하세
-						가을하늘 공활한대 높고 구름없이 밝은달은 우리가슴 일편단심 일세 무궁화 삼천리 화려강산 대한사람 대한으로 길이보전하세
-						이기상과 이맘으로 충성을 다하여 괴로우나 즐거우나 나라 사랑하세 무궁화 삼천리 화려강산 대한사람 대한으로 길이보전하세
-						<div class="reviewdate">2021-10-15</div>
-					</div>
-					<div class="mx-6 my-2 reviewcontent">
-						<div class="reviewid">oasis</div>
-						난 널 (you) 목말라해 너무 더워 물이 필요해 Hot in here 난 웅덩이 깊이 파인 곳을 찾아 다녀 달콤하게
-						날 더 바라봐줘 (넌 훌륭해) 이 메마른 땅을 정글로 만들고 난 모험하고 또 탐험 You know how we do
-						it we just do it All you ladies hands in the air All my ladies
-						hands up in the air 그녀는 그녀는 날 미치게 해 그녀는 날 숨쉬게 해 Yeah O A She's
-						mine O A She's mine O A She's mine Yeah She's mine All you ladies
-						hands in the air All my ladies hands up in the air 그녀는 그녀는 날 미치게 해
-						그녀는 날 숨쉬게 해 Get closer to my body 천국에다가 데려다 줄게 body to body 넌 낮이
-						밤이 될 때까지 waterfall 그 속에서 난 헤엄치고 싶어 You know how we do it we just
-						do it All you ladies hands in the air All my ladies hands up in
-						the air 그녀는 그녀는 날 미치게 해 그녀는 날 숨쉬게 해 Yeah O A She's mine O A She's
-						mine O A She's mine Yeah She's mine All you ladies hands in the
-						air All my ladies hands up in the air 그녀는 그녀는 날 미치게 해 그녀는 날 숨쉬게 해
-						넌 남자들 욕망에 갈증 나게 하면서 어째서 주위 여자들은 물 맥여 때마침 넌 제대로 된 상대를 만났어 난 태연하게
-						제안하지 술 대결 결관 KO 고양이한테 생선을 맡긴 거야 늘 첫 경험하는 자세 앞뒤를 몰라 감탄사대신 엄지 척 다리
-						사이로 난 광주출신 아니지만 전라도 환영 넌 겨울 해 밤도 안됐는데 자꾸만 지려해 baby oh 쪽쪽 물고 뜯고 맛보고
-						즐겨 악 질러대 하고 싶죠 하고 있는데도 하고 싶을 거야 그럴 땐 이걸 꺼내먹어 (You Know What) 지구부터
-						달까지 로켓을 쏘아 All you ladies hands in the air All my ladies hands up
-						in the air 그녀는 그녀는 날 미치게 해 그녀는 O A She's mine O A She's mine O A
-						She's mine
-						<div class="reviewdate">2021-10-15</div>
-					</div>
+					<span>
+						<button class='revbtn' id='revbtn'>리뷰 작성</button>
+					</span>
+					<p class="fw-bolder" id='revcnt'></p>
 				</div>
+			</div>
+		</div>
 	</section>
 	<!-- Footer-->
 	<footer class="border-top">
