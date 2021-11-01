@@ -13,17 +13,16 @@
  */
 .reviewcontent {
   background-color: rgb(223, 223, 223);
-  margin : 30px;
-}
-.revbtn{
-	float:right;
+  margin: 30px;
 }
 
-.xflow{
-	overflow-x:hidden;
+.revbtn {
+  float: right;
 }
 
-.reviewid {}
+.xflow {
+  overflow-x: hidden;
+}
 
 .reviewdate {
   float: right;
@@ -80,7 +79,6 @@
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
-
   transform: translateX(-50%) translateY(-50%);
 }
 
@@ -12310,7 +12308,9 @@ input[type=textpassword] {
   box-sizing: border-box;
 }
 
-input[type=submit],[type=button], button {
+input[type=submit],
+[type=button],
+button {
   width: 80%;
   background-color: #4CAF50;
   color: white;
@@ -12322,51 +12322,53 @@ input[type=submit],[type=button], button {
 }
 
 
-#myInfoBtn, #myFavoriteBtn{
-	width: 40%;
+#myInfoBtn,
+#myFavoriteBtn {
+  width: 40%;
   background-color: #4CAF50;
   color: white;
-   margin: 0;
- 
+  margin: 0;
+
   border: none;
   cursor: pointer;
 }
-#userName{
-	margin-left: 20px;	
+
+#userName {
+  margin-left: 20px;
 }
 
 
 /*내 정보-즐겨찾기 사진 부분*/
-#favoriteContent{
-	text-align: left;
-	padding:0;
-	margin:0
-}
-#favoriteContent>a{
-	padding:0;
-	margin:0;
-	width: 120px;
-	float : left;
-	
-}
-#favoriteContentSecond>p{
-	padding:0;
-	margin:20px;
-	font-size: 15px;
-	width: 120px;
-	
-	
+#favoriteContent {
+  text-align: left;
+  padding: 0;
+  margin: 0
 }
 
-#favoriteContent>span>img{
-	float : left;
-	
-}
-#favoriteContentSecond{
-	float:left;
-	width: 120px;
-	
+#favoriteContent>a {
+  padding: 0;
+  margin: 0;
+  width: 120px;
+  float: left;
+
 }
 
+#favoriteContentSecond>p {
+  padding: 0;
+  margin: 20px;
+  font-size: 15px;
+  width: 120px;
 
 
+}
+
+#favoriteContent>span>img {
+  float: left;
+
+}
+
+#favoriteContentSecond {
+  float: left;
+  width: 120px;
+
+}

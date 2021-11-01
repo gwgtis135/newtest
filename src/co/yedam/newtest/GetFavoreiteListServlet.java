@@ -34,7 +34,7 @@ public class GetFavoreiteListServlet extends HttpServlet {
 		Gson gson = new GsonBuilder().create();
 		
 		String userId = request.getParameter("userId");
-		
+		System.out.println(userId);
 		FavoriteDAO dao = new FavoriteDAO();
 		List<FavoriteVO> list = dao.getFavoriteVO(userId);
 

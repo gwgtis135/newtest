@@ -29,7 +29,7 @@ $(document).ready(function() {
 	$(document).on('click', '#myInfoBtn', function(e) {
 
 
-		$(form).empty();
+		//$(form).empty();
 		$(modalbody).empty();
 		$(modalbody).append(makeinMyInfo());
 

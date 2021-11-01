@@ -89,11 +89,6 @@ function loadrev(id) {
 		dataType: 'json',
 		success: function(result) {
 			console.log('success');
-			
-					//<div class="mx-6 my-3 reviewcontent">
-						//<div class="reviewid">아무개</div>
-						//div class="reviewdate">2021-10-15</div>
-			//id content grade credate
 			for(dat of result){
 				let list = $('#revlist');
 				let outdiv = $('<div />');
@@ -111,10 +106,6 @@ function loadrev(id) {
 				outdiv.append(fodiv)
 				//outdiv.html(outdiv.html()+"<br>");
 				list.append(outdiv);
-				console.log(dat.id);
-				console.log(dat.content);
-				console.log(dat.grade);
-				console.log(dat.credate);
 			}
 		},
 		error: function(reject) {
