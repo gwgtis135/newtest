@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
 
 	let xhtp = new XMLHttpRequest();
@@ -39,7 +38,6 @@ function makemain(datum, tar) {
 	img.attr({ 'alt': '이미지를 불러오는데 실패했습니다', 'width': '250px' });
 	i.attr('class', 'bi bi-collection');
 	h2.html(datum.name);
-	//p2.html(datum.manu);
 	a.attr('href', 'Particularity.html?id=' + datum.id);
 	img.attr('src', '../minpro/' + datum.image_loc);
 	p.append(img);

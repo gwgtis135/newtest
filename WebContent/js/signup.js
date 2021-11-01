@@ -1,6 +1,3 @@
-/**
- * 
- */
 $(document).ready(function() {
 	let modal = $('.modal')
 	let modalbody = $('.modal_body')
@@ -16,6 +13,8 @@ $(document).ready(function() {
 	})
 
 	$(modal).click(function(event) {
+		console.log($(modal).hasClass("show"));
+		console.log($(event.target).hasClass("show"));
 		if ($(event.target).hasClass("show") == $(modal).hasClass("show")) {
 			$(modal.toggleClass("show"))
 		}
@@ -23,14 +22,9 @@ $(document).ready(function() {
 	//회원가입 버튼 이벤트
 	$(document).on('click', '#signUpBtn', function(event) {
 		event.preventDefault();
-
-
 		let id = $('#userEmail').val();
 		let pw = $('#userSignUpPw').val();
 		let name = $('#username').val();
-		console.log(id);
-		console.log(pw);
-		console.log(name);
 
 		let xhttp = new XMLHttpRequest();
 		xhttp.onload = function() {

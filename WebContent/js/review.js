@@ -6,7 +6,7 @@ $(document).ready(function() {
 	$(revbtn).click(function() {
 		$(modal).toggleClass("show");
 		$('.modal_body').empty();
-		$(modalbody).append(makearform());
+		$(modalbody).append(makearform()); // 제이쿼리 함수
 
 		if ($(modal).hasClass("show")) {
 			$(modalbody).css("overflow", "auto");
